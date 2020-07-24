@@ -33,15 +33,13 @@ public class MainActivity extends AppCompatActivity {
         Cartesian cartesian = AnyChart.column();
 
         List<DataEntry> data = new ArrayList<>();
-        data.add(new ValueDataEntry("Rouge", 80540));
-        data.add(new ValueDataEntry("Foundation", 94190));
-        data.add(new ValueDataEntry("Mascara", 102610));
-        data.add(new ValueDataEntry("Lip gloss", 110430));
-        data.add(new ValueDataEntry("Lipstick", 128000));
-        data.add(new ValueDataEntry("Nail polish", 143760));
-        data.add(new ValueDataEntry("Eyebrow pencil", 170670));
-        data.add(new ValueDataEntry("Eyeliner", 213210));
-        data.add(new ValueDataEntry("Eyeshadows", 249980));
+        data.add(new ValueDataEntry("S", 80));
+        data.add(new ValueDataEntry("M", 50));
+        data.add(new ValueDataEntry("T", 72));
+        data.add(new ValueDataEntry("W", 60));
+        data.add(new ValueDataEntry("T", 60));
+        data.add(new ValueDataEntry("F", 40));
+        data.add(new ValueDataEntry("S", 50));
 
         Column column = cartesian.column(data);
 
@@ -54,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 .format("${%Value}{groupsSeparator: }");
 
         cartesian.animation(true);
-        cartesian.title("Top 10 Cosmetic Products by Revenue");
+        cartesian.title("Daily Average Temperature");
 
         cartesian.yScale().minimum(0d);
 
@@ -63,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
         cartesian.tooltip().positionMode(TooltipPositionMode.POINT);
         cartesian.interactivity().hoverMode(HoverMode.BY_X);
 
-        cartesian.xAxis(0).title("Product");
-        cartesian.yAxis(0).title("Revenue");
+        cartesian.xAxis(0).title("Days");
+        cartesian.yAxis(0).title("Temperature");
 
         anyChartView.setChart(cartesian);
 

@@ -9,10 +9,11 @@
 
     <com.anychart.AnyChartView
         android:id="@+id/any_chart_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="0dp" >
+        android:layout_width="434dp"
+        android:layout_height="312dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="282dp">
 
     </com.anychart.AnyChartView>
 
