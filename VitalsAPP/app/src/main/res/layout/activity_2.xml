@@ -8,6 +8,12 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".Activity2">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature During the Week"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="30sp" />
     <com.anychart.AnyChartView
         android:id="@+id/any_chart_view"
 
@@ -23,12 +29,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is Activity 2"
+        android:text="Sunday, July 26"
         android:textSize="30sp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="openActivity3"
-        android:text="Open Activity 3" />
+        android:text="UV Blink Pattern" />
 
 </LinearLayout>
