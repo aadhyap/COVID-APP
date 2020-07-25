@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_material_light"
+    android:background="#48C9B0"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".Activity3">
@@ -13,12 +13,12 @@
         android:layout_height="wrap_content"
         android:text="UV Light Blinking Pattern"
         android:textSize="30sp"
-        android:textColor="@color/cardview_dark_background"/>
+        android:textColor=	"#FFFFFF"/>
     <com.anychart.AnyChartView
         android:id="@+id/any_chart_view"
 
         android:layout_width="385dp"
-        android:layout_height="297dp"
+        android:layout_height="400dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,6 +26,12 @@
         tools:ignore="MissingConstraints">
 
     </com.anychart.AnyChartView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor=	"#FFFFFF"
+        android:text="Sunday, July 26"
+        android:textSize="30sp" />
 
 
 </LinearLayout>

@@ -92,6 +92,7 @@ public class Activity3 extends AppCompatActivity {
 
         Line series1 = cartesian.line(series1Mapping);
         series1.name("UV Light");
+        series1.color("#48C9B0");
         series1.hovered().markers().enabled(true);
         series1.hovered().markers()
                 .type(MarkerType.CIRCLE)

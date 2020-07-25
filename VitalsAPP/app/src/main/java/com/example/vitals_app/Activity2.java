@@ -46,6 +46,7 @@ public class Activity2 extends AppCompatActivity {
 
         Column column = cartesian2.column(data);
 
+        column.color("#48C9B0");
         column.tooltip()
                 .titleFormat("{%X}")
                 .position(Position.CENTER_BOTTOM)
@@ -65,7 +66,7 @@ public class Activity2 extends AppCompatActivity {
         cartesian2.interactivity().hoverMode(HoverMode.BY_X);
 
         cartesian2.xAxis(0).title("Days");
-        cartesian2.yAxis(0).title("Temperature");
+        cartesian2.yAxis(0).title("Temperature (C)");
 
         anyChartView2.setChart(cartesian2);
 

@@ -3,4 +3,5 @@
     <string name="title_activity_vitals__graph">Vitals_Graph</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="temperature_during_the_day">Temperature during the Day</string>
 </resources>

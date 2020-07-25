@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         Cartesian cartesian = AnyChart.line();
 
+
         cartesian.animation(true);
 
         cartesian.padding(10d, 20d, 5d, 20d);
@@ -81,13 +82,15 @@ public class MainActivity extends AppCompatActivity {
         seriesData.add(new CustomDataEntry("5:00 PM", 15.7));
         seriesData.add(new CustomDataEntry("5:30 PM", 12.0));
 
+
         Set set = Set.instantiate();
         set.data(seriesData);
         Mapping series1Mapping = set.mapAs("{ x: 'x', value: 'value' }");
 
 
         Line series1 = cartesian.line(series1Mapping);
-        series1.name("Brandy");
+        series1.color("#48C9B0");
+        series1.name("Temperature");
         series1.hovered().markers().enabled(true);
         series1.hovered().markers()
                 .type(MarkerType.CIRCLE)
