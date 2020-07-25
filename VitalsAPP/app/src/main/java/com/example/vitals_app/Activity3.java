@@ -120,4 +120,8 @@ public class Activity3 extends AppCompatActivity {
 
         }
     }
+    public void openSettingsActivity(View view) {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
 }

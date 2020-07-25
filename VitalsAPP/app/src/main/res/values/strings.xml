@@ -4,4 +4,16 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="temperature_during_the_day">Temperature during the Day</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Settings</string>
+    <string name="sync_header">UV Flash Patterns</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your Name</string>
+    <string name="reply_title">Default reply action</string>
+
+
+
 </resources>

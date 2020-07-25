@@ -76,6 +76,10 @@ public class Activity2 extends AppCompatActivity {
         Intent intent = new Intent(this, Activity3.class);
         startActivity(intent);
     }
+    public void openSettingsActivity(View view) {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
     @Override
     public void finish() {
         super.finish();

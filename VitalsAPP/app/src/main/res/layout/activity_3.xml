@@ -8,6 +8,20 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".Activity3">
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_gravity="right">
+        <Button
+            android:background="#48C9B0"
+            android:textColor=	"#566573"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="openSettingsActivity"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:text="settings" />
+    </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
