@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-
+    android:background="@color/background_material_light"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Activity2">
     <com.anychart.AnyChartView
         android:id="@+id/any_chart_view"
 
@@ -19,14 +20,10 @@
         tools:ignore="MissingConstraints">
 
     </com.anychart.AnyChartView>
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="160dp"
-        android:layout_height="545dp"
-        android:layout_weight="1"
-        android:onClick="openActivity2"
-        android:text="Open Activity 2"/>
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is Activity 2"
+        android:textSize="30sp" />
 
 </LinearLayout>

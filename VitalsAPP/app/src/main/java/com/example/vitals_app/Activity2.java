@@ -1,10 +1,9 @@
-
 package com.example.vitals_app;
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.anychart.APIlib;
 import com.anychart.AnyChart;
@@ -17,25 +16,25 @@ import com.anychart.enums.Anchor;
 import com.anychart.enums.HoverMode;
 import com.anychart.enums.Position;
 import com.anychart.enums.TooltipPositionMode;
-
-
+import com.r0adkll.slidr.Slidr;
+import com.r0adkll.slidr.model.SlidrInterface;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-
-public class MainActivity extends AppCompatActivity {
-
+public class Activity2 extends AppCompatActivity {
+    private SlidrInterface slidr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_2);
 
-        AnyChartView anyChartView = findViewById(R.id.any_chart_view);
-        APIlib.getInstance().setActiveAnyChartView(anyChartView);
 
-        Cartesian cartesian = AnyChart.column();
+        AnyChartView anyChartView2 = findViewById(R.id.any_chart_view);
+        APIlib.getInstance().setActiveAnyChartView(anyChartView2);
+
+        Cartesian cartesian2 = AnyChart.column();
 
         List<DataEntry> data = new ArrayList<>();
         data.add(new ValueDataEntry("S", 80));
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         data.add(new ValueDataEntry("F", 40));
         data.add(new ValueDataEntry("S", 50));
 
-        Column column = cartesian.column(data);
+        Column column = cartesian2.column(data);
 
         column.tooltip()
                 .titleFormat("{%X}")
@@ -56,26 +55,22 @@ public class MainActivity extends AppCompatActivity {
                 .offsetY(5d)
                 .format("${%Value}{groupsSeparator: }");
 
-        cartesian.animation(true);
-        cartesian.title("Daily Average Temperature");
+        cartesian2.animation(true);
+        cartesian2.title("Daily Average Temperature");
 
-        cartesian.yScale().minimum(0d);
+        cartesian2.yScale().minimum(0d);
 
-        cartesian.yAxis(0).labels().format("${%Value}{groupsSeparator: }");
+        cartesian2.yAxis(0).labels().format("${%Value}{groupsSeparator: }");
 
-        cartesian.tooltip().positionMode(TooltipPositionMode.POINT);
-        cartesian.interactivity().hoverMode(HoverMode.BY_X);
+        cartesian2.tooltip().positionMode(TooltipPositionMode.POINT);
+        cartesian2.interactivity().hoverMode(HoverMode.BY_X);
 
-        cartesian.xAxis(0).title("Days");
-        cartesian.yAxis(0).title("Temperature");
+        cartesian2.xAxis(0).title("Days");
+        cartesian2.yAxis(0).title("Temperature");
 
-        anyChartView.setChart(cartesian);
+        anyChartView2.setChart(cartesian2);
 
-
+        Slidr.attach(this);
     }
 
-    public void openActivity2(View v){
-        Intent intent = new Intent(this, Activity2.class);
-        startActivity(intent);
-    }
 }
