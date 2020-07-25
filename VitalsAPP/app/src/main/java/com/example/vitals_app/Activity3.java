@@ -1,8 +1,6 @@
 package com.example.vitals_app;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,16 +20,15 @@ import com.r0adkll.slidr.Slidr;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class Activity2 extends AppCompatActivity {
+public class Activity3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_2);
+        setContentView(R.layout.activity_3);
 
 
-        AnyChartView anyChartView2 = findViewById(R.id.any_chart_view);
-        APIlib.getInstance().setActiveAnyChartView(anyChartView2);
+        AnyChartView anyChartView3 = findViewById(R.id.any_chart_view);
+        APIlib.getInstance().setActiveAnyChartView(anyChartView3);
 
         Cartesian cartesian2 = AnyChart.column();
 
@@ -67,18 +64,8 @@ public class Activity2 extends AppCompatActivity {
         cartesian2.xAxis(0).title("Days");
         cartesian2.yAxis(0).title("Temperature");
 
-        anyChartView2.setChart(cartesian2);
+        anyChartView3.setChart(cartesian2);
 
         Slidr.attach(this);
     }
-    public void openActivity3(View view) {
-        Intent intent = new Intent(this, Activity3.class);
-        startActivity(intent);
-    }
-    @Override
-    public void finish() {
-        super.finish();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
-    }
-
 }
