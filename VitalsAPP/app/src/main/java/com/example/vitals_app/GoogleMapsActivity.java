@@ -29,6 +29,8 @@ import java.util.Scanner;
 public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private TileOverlay mOverlay;
+    private HeatmapTileProvider mProvider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +61,7 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
         LatLng anotherpoint = new LatLng(42.2743, -71.8103);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(anotherpoint));
 
-        mMap.addMarker(new MarkerOptions().position(recreationCenter).title("Recreation Center"));
+        //mMap.addMarker(new MarkerOptions().position(recreationCenter).title("Recreation Center"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(recreationCenter));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(recreationCenter, 18));
         mMap.setBuildingsEnabled(true);
@@ -75,7 +77,7 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
     }
     private void addHeatMap() {
         List<LatLng> list = null;
-        Object weightedList = null;
+        Object weightedList;
 
         // Get the data: latitude/longitude positions of police stations.
         try {
@@ -99,16 +101,18 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
 
 
 
+        weightedList = list;
 
         // Create a heat map tile provider, passing it the latlngs of the police stations.
 
-        HeatmapTileProvider mProvider = new HeatmapTileProvider.Builder()
-
+        mProvider = new HeatmapTileProvider.Builder()
+                .weightedData((Collection<WeightedLatLng>) weightedList)
+                .radius(50)
                 .gradient(gradient)
                 .data(list)
                 .build();
         // Add a tile overlay to the map, using the heat map tile provider.
-        TileOverlay mOverlay = mMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
+        mOverlay = mMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
     }
 
     private ArrayList<LatLng> readItems(int resource) throws JSONException {
