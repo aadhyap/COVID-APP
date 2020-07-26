@@ -129,5 +129,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
+    public void openGoogleMapsActivity(View view) {
+        Intent intent = new Intent(this, GoogleMapsActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
 
 }

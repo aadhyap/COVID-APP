@@ -13,7 +13,7 @@
     <!-- Messages Preferences -->
     <string name="signature_title">Your Name</string>
     <string name="reply_title">Default reply action</string>
-
+    <string name="title_activity_google_maps">Map</string>
 
 
 </resources>
