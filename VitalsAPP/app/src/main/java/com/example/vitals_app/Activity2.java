@@ -53,14 +53,14 @@ public class Activity2 extends AppCompatActivity {
                 .anchor(Anchor.CENTER_BOTTOM)
                 .offsetX(0d)
                 .offsetY(5d)
-                .format("${%Value}{groupsSeparator: }");
+                .format("{%Value}{groupsSeparator: }");
 
         cartesian2.animation(true);
         cartesian2.title("Daily Average Temperature");
 
         cartesian2.yScale().minimum(0d);
 
-        cartesian2.yAxis(0).labels().format("${%Value}{groupsSeparator: }");
+        cartesian2.yAxis(0).labels().format("{%Value}{groupsSeparator: }");
 
         cartesian2.tooltip().positionMode(TooltipPositionMode.POINT);
         cartesian2.interactivity().hoverMode(HoverMode.BY_X);

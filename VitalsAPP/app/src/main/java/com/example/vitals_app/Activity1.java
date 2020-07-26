@@ -38,7 +38,8 @@ public class Activity1 extends AppCompatActivity {
         Cartesian cartesian = AnyChart.line();
 
 
-        cartesian.animation(true);
+        cartesian.animation(true,9000);
+
 
         cartesian.padding(10d, 20d, 5d, 20d);
 

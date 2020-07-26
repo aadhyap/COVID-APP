@@ -25,7 +25,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UV Light Blinking Pattern"
+        android:text="Mask Battery Life"
         android:textSize="30sp"
         android:textColor=	"#FFFFFF"/>
     <com.anychart.AnyChartView
@@ -33,6 +33,7 @@
 
         android:layout_width="385dp"
         android:layout_height="400dp"
+        android:background="#1BB4BC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,14 +47,7 @@
         android:textColor=	"#FFFFFF"
         android:text="Sunday, July 26"
         android:textSize="30sp" />
-    <Button
-        android:background="#1BB4BC"
-        android:textColor=	"#566573"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="openActivity4"
-        android:textSize="20dp"
-        android:text="Battery Life" />
+
 
 
 </LinearLayout>

@@ -124,4 +124,9 @@ public class Activity3 extends AppCompatActivity {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
+    public void openActivity4(View view) {
+        Intent intent = new Intent(this, Activity4.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
 }
