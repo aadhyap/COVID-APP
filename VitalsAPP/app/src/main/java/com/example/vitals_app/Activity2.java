@@ -46,7 +46,7 @@ public class Activity2 extends AppCompatActivity {
 
         Column column = cartesian2.column(data);
 
-        column.color("#48C9B0");
+        column.color("#1BB4BC");
         column.tooltip()
                 .titleFormat("{%X}")
                 .position(Position.CENTER_BOTTOM)

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#48C9B0"
+    android:background="#1BB4BC"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".Activity3">
@@ -13,7 +13,7 @@
         android:layout_height="70dp"
         android:layout_gravity="right">
         <Button
-            android:background="#48C9B0"
+            android:background="#1BB4BC"
             android:textColor=	"#566573"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
