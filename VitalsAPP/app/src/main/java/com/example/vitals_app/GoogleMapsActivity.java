@@ -61,7 +61,7 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
         LatLng anotherpoint = new LatLng(42.2743, -71.8103);
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(anotherpoint));
 
-        mMap.addMarker(new MarkerOptions().position(recreationCenter).title("Recreation Center: 20 "));
+        //mMap.addMarker(new MarkerOptions().position(recreationCenter).title("Recreation Center: 20 "));
 
         mMap.animateCamera(CameraUpdateFactory.newLatLng(recreationCenter));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(recreationCenter, 18));
