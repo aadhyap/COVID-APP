@@ -59,18 +59,19 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
         LatLng recreationCenter = new LatLng(42.2743, -71.8081);
 
         LatLng anotherpoint = new LatLng(42.2743, -71.8103);
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(anotherpoint));
+        //mMap.moveCamera(CameraUpdateFactory.newLatLng(anotherpoint));
 
-        //mMap.addMarker(new MarkerOptions().position(recreationCenter).title("Recreation Center"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(recreationCenter));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(recreationCenter, 18));
+        mMap.addMarker(new MarkerOptions().position(recreationCenter).title("Recreation Center: 20 "));
+
+        mMap.animateCamera(CameraUpdateFactory.newLatLng(recreationCenter));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(recreationCenter, 18));
         mMap.setBuildingsEnabled(true);
 
         CameraPosition cameraPosition = new CameraPosition.Builder()
                 .target(recreationCenter)      // Sets the center of the map to Mountain View
                 .zoom(17)                   // Sets the zoom
                 .bearing(90)                // Sets the orientation of the camera to east
-                .tilt(30)                   // Sets the tilt of the camera to 30 degrees
+                .tilt(60)                   // Sets the tilt of the camera to 30 degrees
                 .build();                   // Creates a CameraPosition from the builder
         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
         addHeatMap();
